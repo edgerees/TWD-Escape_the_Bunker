@@ -16,7 +16,7 @@ body {
   width: 100%;
   z-index: 0;
   background: url("final1.jfif");
-  background-position: 50%;
+  background-position: 25%;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -102,14 +102,14 @@ body {
     max-width: 100%;
     height: 40%;
     top: 20px;
-    left: 365px;
+    left: 390px;
     z-index: 4;
 }
 #titlewords2 {
     position: absolute;
     max-width: 100%;
     height: 10%;
-    top: 195px;
+    top: 210px;
     left: 540px;
     z-index: 4;
 }
