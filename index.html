@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Walking Dead: Escape the Bunker</title>
-   <link rel="stylesheet" href="Style.css">
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
     <div id="music">
@@ -35,55 +36,151 @@
 
     <div id="page2">
         <h1 class ='header' ></h1> WELCOME TO THE END OF THE WORLD<br> Find a way out of the Bunker</h1>>
-        <div class="intro-collector"> -
+        <div class="rick-collector">
             <div class="container"> 
 
 
             </div>
-        <img class="rick" src="rick1.png">
+        <img class="rick" src="rick crouch 3.png">
             <div class="container">
 
             </div>
         </div>
-        <div class="text-center-1">
-                <p class="instructions"> It is the year 2025 and walkers have taken control of the land, <br>  
-                While out on a supply run, you have come across a bunker filled with food and supplies. <br>   
-                Being caughtup with the plunder, you failed to see the boobie trapped door slam shut behind you. <br>   
-                There is a lock on the door and in order to escape you must break the code with the clues around you. <br>   
-                Be careful, if you enter the wrong letter into the lock another zombie will be released into the bunker.<br>   
-                With no ammo or weapons, time isnt on your side. Can you make it out alive?
+        <div class="center-text">
+                <p class="dialog instructions"> It is the year 2025 <br> 
+                Walkers have taken control of the land, <br>  
+                While out on a supply run, <br>   
+                you have come across a bunker filled with food and supplies. <br>     
                 </p>
                 <p id="empty-word"></p>
         </div>
-        <div class="text-center-2">
-                <img src="zombe-intro.png">
+        <div class="side_pane">
+                <img class="side" src="city.jpg">
         </div>
         <div class="reset-button">
             <button id="refresh" onclick="window.location.reload();">Reset </button>
         </div>
         <div class="game-buttons">
-            <button id="introtalk"> NEXT</button>
+            <button id="introtalk1"> NEXT</button>
         </div>
-
-
-
     </div>
 
+    <div id="page3">
+        <h1 class ='header' ></h1> WELCOME TO THE END OF THE WORLD<br> Find a way out of the Bunker</h1>>
+        <div class="rick-collector">
+            <div class="container"> 
+            </div>
+        <img class="rick" src="rickaxefinal.png">
+            <div class="container">
+            </div>
+        </div>
 
+        <div class="center-text">
+                <p class="dialog instructions">  Excited with the plunder found, <br> 
+                    you failed to see the boobie trapped door slam shut behind you. <br> 
+                    Using your axe you try to break through but the axe doesnt stand a chance <br>
+                    The only way to escape is to crack the lock on the escape door. <br>
+                    Keep an eye out for clues laying around but be careful, <br>   
+                    entering in a wrong letter will release a zombie into the bunker.<br>
+                </p>
+                <p id="empty-word"></p>
+        </div>
 
+        <div class="side_pane">
+                <img class='side' src="newlock.png">
+        </div>
+        <div class="reset-button">
+            <button id="refresh" onclick="window.location.reload();">Reset </button>
+        </div>
+        <div class="game-buttons">
+            <button id="introtalk2"> NEXT</button>
+        </div>
+    </div>
 
+    <div id="page4">
+        <h1 class ='header' ></h1> WELCOME TO THE END OF THE WORLD<br> Find a way out of the Bunker</h1>>
+        <div class="rick-collector">
+            <div class="container"> 
+            </div>   
+        <img class="rick" src="rick crouch 3.png">
+            <div class="container">
+            </div>
+        </div>
 
+        <div class="center-text">
+                <p class="dialog instructions">   With no ammo or weapons, time isnt on your side.<br> 
+                    Can you make it out alive?<br> 
+                </p>
+                <p id="empty-word"></p>
+        </div>
+        <div class="side_pane">
+                <img class="side" src="eye.png">
+        </div>
+        <div class="reset-button">
+            <button id="refresh" onclick="window.location.reload();">Reset </button>
+        </div>
+        <div class="game-buttons">
+            <button id="introtalk3"> Start</button>
+        </div>
+    </div>
 
+    <div id="page5">
+        <h1 class ='header' ></h1> WELCOME TO THE END OF THE WORLD<br> Find a way out of the Bunker</h1>>
+        <div class="rick-collector">
+            <div class="container"> 
+                <img class='attack' id="zombie3" src="zombie3.png">
+                <img class='attack' id="zombie2" src="zombie2.png">
+                <img class='attack' id="zombie1" src="zombe-intro.png">
+            </div>   
+        <img class="rick" src="rickaxefinal.png">
+            <div class="container">
+                <img class='attack' id="zombie6" src="zombie7.png">
+                <img class='attack' id="zombie5" src="zombie5.png">
+                <img class='attack' id="zombie4" src="zombie4.png">
+            </div>
+        </div>
+        <div class ='gameplay-text'>
+            <h2 id="encoded-word"></h2>
+            <h2 id="dash-holder"></h2>
+            <h2 id="laser-guesses"></h2>
+        </div>
+        <div class="side_pane">
+            <img class='side' id='final lock' src="newunlocked.png">
+        </div>
+        <div class="reset-button">
+            <button id="refresh" onclick="window.location.reload();">Reset </button>
+        </div>
 
+        <div class='game-buttons'>
+            <form id="form4">
+                <p>CHOOSE A LETTER:</p><input type='text' id='user-input' autocomplete='off' autofocus>
+                <button id='submit'>SUBMIT</button>
+                <p id='player-choice'></p>
+                </form>
+        </div>
+    </div>
 
+    <div id="you-win">
+        <p class='finish-text'> YOU WIN!!!</p>
+        <div class="rick-collector">
+            <div class="container">
+            </div>
+                 <img class="rick-win" src="">
+            <div class="container">
+            </div>
+            <div class='spacer'>
+            </div>
+        </div>
+        <button id="refresh" onclick="window.location.reload();">PLAY AGAIN </button>
+    </div>
 
-
-
-
-
-
-
-
-    <script src="app.js"></script>
+    <div id="you-lose">
+        <p class='finish-text'> YOU LOSE!!!</p>
+        <div class="rick-collector">
+                 <img class="rick-lose" src="">
+            </div>
+            <p class='correct-text' id='correct-answer'></p>
+            <button id="refresh" onclick="window.location.reload();">PLAY AGAIN </button>
+        </div>
 </body>
 </html>
