@@ -319,7 +319,11 @@ let form = document.querySelector('#form4');
 
 
 
+## Contact
 
+Feel free to check out the rest of my work at [GitHub](https://github.com/edgerees/TWD-Escape_the_Bunker) <br>
+
+Email: [Gmail](www.gmail.com): edreeshuss@gmail.com
 
 
 

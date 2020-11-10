@@ -1,20 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-/* * {
-    background-color: black;
-} */
-
-/* 
-body {
-  margin: 0;
-  padding: 0;
-} */
-/* body, #page1, #page2, #page1, #page3, #page4, #page5 {}*/
-
-
 #background5 {
   background: url('bgg1.png') 100% no-repeat;
-  background-size:     cover;                      /* <------ */
+  background-size:     cover;                     
   background-repeat:   no-repeat;
   background-position: center center; 
   width:100%; 
@@ -286,7 +274,6 @@ button:hover {
 
 #page2 {
     display: none;
-    /* grid-template-rows: 100px 300px; */
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     justify-content: center;
@@ -343,7 +330,6 @@ button:hover {
     margin-top: 25px;
     font-size: 21px;
     text-align: center;
-        /* ***Fade in animation */
          -webkit-animation:fadein 5s; 
          -moz-animation: fadein 5s;
          -ms-animation:fadein 5s;
