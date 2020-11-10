@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
           for (let j = 0; j < decodedAlpha.length; j++) {
                 if (splitRandomWord[i].toUpperCase()=== decodedAlpha[j]) {
                       caesarHolder += threeLettersBack[j]
-                }
+                } /*concatanate*/
           }
     };
 
     let letterCatcher = [];
     console.log(letterCatcher)
 
-    document.getElementById('encoded-word').innerHTML = caesarHolder;
+    document.getElementById('encoded-word').innerHTML = caesarHolder; /*List encoded word*/
     document.getElementById('dash-holder').innerHTML = dashHolder.join('');
     document.getElementById('correct-answer').innerHTML = `THE CORRECT ANSWER WAS: ${randomWord.toUpperCase()}`
     
@@ -77,26 +77,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let form = document.querySelector('#form4');
 
     form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          let temp = dashHolder.join('');
+          event.preventDefault(); /*Prevent refresh*/
+          let temp = dashHolder.join(''); /* Gauge wrong answers*/
           let userInput = (document.querySelector('#user-input').value).toLowerCase()
-          if (userInput === '') {
-                window.alert('YOU MUST ENTER A LETTER!')
+          if (userInput === '') /*Did user put anything in*/{
+                window.alert('YOU MUST ENTER A LETTER!');
+          }else if (letterCatcher.includes(userInput.toUpperCase())) {
+                window.alert('THATS THE SAME LETTER!');
+                document.getElementById('user-input').value = ''
 
           }else {
 
                 for (let i = 0; i < splitRandomWord.length; i++) {
-                      if (userInput === splitRandomWord[i]) {
-                            dashHolder[i] = `${userInput}`;
-                            document.getElementById('dash-holder').innerHTML = (dashHolder.join('')).toUpperCase()
+                      if (userInput === splitRandomWord[i]) /*If input matches any of the letters of randomword*/{
+                            dashHolder[i] = `${userInput}`; /* If it does then letter is put into dashHolder at right index*/
+                            document.getElementById('dash-holder').innerHTML = (dashHolder.join('')).toUpperCase() /*Displays to user lowercase*/ 
                       }
                 }
-                if (temp == dashHolder.join('')) {
-                      wrongAnswers++;
+                if (temp == dashHolder.join('')) /* Has dash holder changed , if so then will go to wrong answer incremented by 1*/ {
+                      wrongAnswers++; /* gp to line 100*/
                 }
-                letterCatcher.push(userInput.toUpperCase())
+                letterCatcher.push(userInput.toUpperCase()) /* Push to user, show in lowercas*/
                 document.getElementById('playerchoice').innerHTML = `YOU HAVE ENTERED: ${letterCatcher}, `
-                if (wrongAnswers === 1) { 
+                if (wrongAnswers === 1) { /* Previously set to 0 ,1 wrong answer, will change image to make zombie appear*/
                       document.getElementById("background5").style.backgroundImage = "url('bgg2.png')";
                 }else if (wrongAnswers === 2) {
                       document.getElementById("background5").style.backgroundImage = "url('bgg3.png')";
@@ -109,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }else if (wrongAnswers === 6) {
                       document.getElementById("background5").style.backgroundImage = "url('bgg7.png')";
                 }
-                if (!dashHolder.includes('_ ')){
-                      document.getElementById('page5').style.display = "none";
+                if (!dashHolder.includes('_ ')) /*If dashHolder does NOT include any dashes, then user WON! apply function*/{
+                      document.getElementById('page5').style.display = "none"; /*wipe page, then turn flex on*/
                       document.getElementById('you-win').style.display = "flex";
-                } else if (wrongAnswers === 7) {
-                      document.getElementById('page5').style.display = 'none'
+                } else if (wrongAnswers === 7) /*If wrongAnswer */{
+                      document.getElementById('page5').style.display = 'none'/*wipe page, then turn flex on*/
                       document.getElementById('you-lose').style.display = "flex"
                 }
           }
